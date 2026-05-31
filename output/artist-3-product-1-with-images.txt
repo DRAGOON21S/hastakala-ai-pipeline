@@ -1,0 +1,103 @@
+[
+  {
+    "product_id": "HK-AR-0003-01",
+    "artist_info": {
+      "name": "JANNU JOY CHARRAN",
+      "id": "HK-AR-0003"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "Lord Krishna: A Serene Melody",
+        "hook_subtitle": "Experience the divine resonance of music and devotion.",
+        "price_inr": 12999,
+        "availability_status": "Ready to Ship"
+      },
+      "main_content": {
+        "rich_description_html": "<p>This captivating mixed-media artwork presents a contemplative portrayal of Lord Krishna, the celestial flautist. Rendered in acrylic and charcoal, the piece invites viewers into a moment of profound spiritual absorption.</p><p>The vibrant yellow backdrop radiates a divine aura, a luminous halo that cradles the serene figure. Krishna, depicted with deep, rich skin tones and adorned in traditional jewelry, is crowned with the iconic peacock feathers, a symbol of his divine grace. His eyes are closed, lost in the transcendental music emanating from his flute, evoking an atmosphere of peace and unwavering devotion.</p><p>This artwork is offered with an optional, carefully selected frame to enhance its presence in your space.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "The Inspiration",
+          "title": "Echoes of the Divine Flute",
+          "description": "The artist was moved by the timeless narratives of Lord Krishna, seeking to capture the profound serenity and spiritual ecstasy associated with his divine music and presence."
+        },
+        {
+          "phase": "The Craft",
+          "title": "A Dialogue of Mediums",
+          "description": "Acrylics and charcoal converge on the canvas, creating a rich textural interplay. The vibrant hues of acrylic are balanced by the deep, expressive lines of charcoal, lending a unique depth and emotional resonance to the figure and its radiant setting."
+        },
+        {
+          "phase": "The Culmination",
+          "title": "A Vision of Sacred Harmony",
+          "description": "The completed work emanates a powerful sense of peace and spiritual devotion, a visual melody that speaks to the soul and brings a touch of the divine into the viewer's environment."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [
+          "Acrylic",
+          "Charcoal"
+        ],
+        "dimensions_cm": {
+          "height": 41.91,
+          "width": 30.48
+        },
+        "weight_kg": 0.5,
+        "craft_type": "Mixed media"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0003-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "lord-krishna-mixed-media-painting-mockup-01",
+          "title": "Lord Krishna Painting in a Modern Living Room",
+          "placement_context": "A serene, modern living room with minimalist decor. The painting is hung above a sleek, dark wood console table, with a soft, diffused light source illuminating the artwork.",
+          "prompt": "A 41.91cm x 30.48cm mixed-media painting of Lord Krishna playing the flute, rendered in acrylic and charcoal, with a vibrant yellow background. The artwork is framed in a thin, black contemporary frame and placed on a textured off-white wall in a well-lit, modern living room. The composition includes a minimalist dark wood console table below the painting, with a subtle green potted plant on one side. Soft, natural light streams in from an unseen window, creating a gentle ambiance. Camera angle is eye-level, medium shot, capturing the painting and a portion of the surrounding decor. Aspect ratio 3:4.",
+          "aspect_ratio": "3:4",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "Server disconnected without sending a response."
+        },
+        {
+          "slug": "lord-krishna-mixed-media-painting-mockup-02",
+          "title": "Lord Krishna Painting in a Bohemian Reading Nook",
+          "placement_context": "A cozy, bohemian-style reading nook, featuring a plush armchair, a stack of books, and warm ambient lighting. The painting is displayed on a wall adorned with macrame art.",
+          "prompt": "A 41.91cm x 30.48cm mixed-media painting of Lord Krishna playing the flute, created with acrylic and charcoal on canvas, set against a radiant yellow background. The artwork is presented unframed, leaning against a textured wall in a bohemian reading corner. Surrounding elements include a deep emerald green velvet armchair, a small wooden side table with a stack of vintage books, and a delicate macrame wall hanging. Warm, inviting lamplight casts a cozy glow on the scene. Close-up shot focusing on the painting's texture and detail, with the surrounding decor softly blurred. Aspect ratio 4:5.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "[Errno 11001] getaddrinfo failed"
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "lord-krishna-mixed-media-painting-story-01",
+          "title": "Textural Interplay of Acrylic and Charcoal",
+          "placement_context": "A close-up view of the painting's surface, emphasizing the tactile qualities of the materials.",
+          "prompt": "Extreme close-up macro shot of a mixed-media artwork surface, showcasing the rich texture of acrylic paint strokes and the deep, expressive lines of charcoal. The vibrant yellow background transitions into darker, detailed areas depicting the flowing fabric and jewelry of a divine figure. The focus is on the interplay between the smooth, matte finish of the acrylic and the slightly gritty, powdery texture of the charcoal. Dramatic, directional lighting highlights the dimensionality of the materials. Aspect ratio 16:9.",
+          "aspect_ratio": "16:9",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "[Errno 11001] getaddrinfo failed"
+        },
+        {
+          "slug": "lord-krishna-mixed-media-painting-story-02",
+          "title": "Vibrant Yellow Aura",
+          "placement_context": "An abstract representation of the radiant yellow background, symbolizing divine energy.",
+          "prompt": "Abstract, high-detail close-up of a vibrant, luminous yellow background, created with acrylic paint. The texture suggests a subtle impasto technique, with brushstrokes creating variations in light and shadow. The edges of the yellow bleed into a soft, diffused gradient, evoking a sense of divine aura or a radiant halo. Soft, ethereal lighting emanates from within the yellow. Aspect ratio 1:1.",
+          "aspect_ratio": "1:1",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "[Errno 11001] getaddrinfo failed"
+        }
+      ]
+    }
+  }
+]

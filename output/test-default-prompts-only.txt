@@ -1,0 +1,100 @@
+[
+  {
+    "product_id": "HK-AR-0009-01",
+    "artist_info": {
+      "name": "Artist Leshant",
+      "id": "HK-AR-0009"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "Old Man: A Study in Expression",
+        "hook_subtitle": "Capturing the profound narrative etched into a life lived.",
+        "price_inr": 2500,
+        "availability_status": "Both"
+      },
+      "main_content": {
+        "rich_description_html": "<p>This realistic sketch offers an intimate portrayal of an elder, focusing on the intricate details that tell a story of time and experience. The artist has meticulously rendered the subject's facial expressions, paying close attention to the subtle nuances of skin texture and the delicate lines that mark a life fully lived.</p><p>Each stroke is a testament to the discipline of realistic sketching, celebrating the power of line and shadow to convey depth and character. The absence of color invites contemplation, allowing the viewer to connect directly with the raw emotion and quiet dignity of the subject.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "The Inspiration",
+          "title": "A Moment of Reflection",
+          "description": "The artist was moved by the compelling narrative held within the face of an elder, drawn to the unique character and wisdom conveyed through their expressions and the visible passage of time on their skin."
+        },
+        {
+          "phase": "The Craft",
+          "title": "Mastery of Line and Texture",
+          "description": "Employing a disciplined approach to realistic sketching, the artist focused on meticulously capturing the intricate details of the subject's skin texture and the expressive quality of their wrinkles, using precise lines and subtle shading."
+        },
+        {
+          "phase": "The Culmination",
+          "title": "An Evocative Portrait",
+          "description": "The finished sketch stands as a powerful and evocative portrait, a testament to the enduring beauty found in the authentic depiction of human experience and the quiet strength of character."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [],
+        "dimensions_cm": {
+          "height": 30.0,
+          "width": 21.0
+        },
+        "weight_kg": 1.0,
+        "craft_type": "Realistic sketch"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0009-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "old-men-hyper-realistic-sketch-living-room-mockup",
+          "title": "Old Men: A Realistic Sketch in a Modern Living Room",
+          "placement_context": "A sophisticated, minimalist living room with neutral tones, featuring the sketch as a focal point on a console table.",
+          "prompt": "A hyper-realistic sketch of an old man's face, 30x21 cm, framed in a thin black frame, placed on a light oak console table in a modern, minimalist living room. The room has a large window with soft natural light, casting gentle shadows. Walls are a muted grey. A small, green potted plant sits beside the frame. Camera angle is eye-level, medium shot, shallow depth of field.",
+          "aspect_ratio": "16:9",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "old-men-hyper-realistic-sketch-gallery-wall-mockup",
+          "title": "Old Men: Realistic Sketch as Part of a Curated Gallery Wall",
+          "placement_context": "A curated gallery wall in a boutique hotel lobby, showcasing the sketch alongside other contemporary art pieces.",
+          "prompt": "A realistic sketch of an elder's face, 30x21 cm, unframed and mounted with a clean white mat, positioned on a gallery wall in a boutique hotel lobby. The wall is painted a deep navy blue. The sketch is part of a curated arrangement with abstract prints and a small landscape painting. Warm, ambient gallery lighting illuminates the artwork. Camera is slightly angled, wide shot, showing the context of the gallery wall.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "old-men-sketch-inspiration-close-up",
+          "title": "The Gaze: Inspiration for the Old Man Sketch",
+          "placement_context": "Visualizing the moment of inspiration behind the artwork.",
+          "prompt": "Close-up, detailed shot focusing on the weathered skin and expressive wrinkles of an elder's face, captured in soft, diffused natural light. The texture of the skin and the depth of the lines are emphasized, conveying wisdom and a life fully lived. No faces, just the texture and emotion. Macro photography style.",
+          "aspect_ratio": "1:1",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "old-men-sketch-craft-texture-detail",
+          "title": "The Hand of the Artist: Capturing Texture",
+          "placement_context": "Highlighting the meticulous craft and material details.",
+          "prompt": "Extreme close-up on a sketchpad showing the intricate detail of graphite lines creating realistic skin texture and wrinkles on an old man's face. The texture of the paper and the subtle shading from graphite are the focus. Soft, directional studio lighting highlights the textural details. Shallow depth of field, focusing on the pencil strokes and paper grain.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ]
+    }
+  }
+]

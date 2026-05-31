@@ -1,0 +1,100 @@
+[
+  {
+    "product_id": "HK-AR-0009-01",
+    "artist_info": {
+      "name": "Artist Leshant",
+      "id": "HK-AR-0009"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "Old Man: A Realistic Sketch",
+        "hook_subtitle": "Capturing the profound narrative etched into a life lived.",
+        "price_inr": 2500,
+        "availability_status": "Both"
+      },
+      "main_content": {
+        "rich_description_html": "<p>This realistic sketch is a tender exploration of age, focusing on the intricate details that tell a story.</p><p>The artist has meticulously rendered the subject's facial expressions, imbuing each line and shadow with a sense of history and character. The delicate rendering of skin texture and the gentle depiction of wrinkles invite contemplation, offering a quiet moment of connection with the subject.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "The Inspiration",
+          "title": "A Study in Lived Experience",
+          "description": "The genesis of this piece lies in the profound beauty of aging, seeking to capture the expressive nuances of a face that carries the weight and wisdom of years. The artist was drawn to the intricate tapestry of wrinkles and the unique texture of aged skin as a testament to a life fully lived."
+        },
+        {
+          "phase": "The Craft",
+          "title": "Mastery of Line and Shadow",
+          "description": "Employing a disciplined approach to realistic sketching, the artist meticulously rendered each contour and subtle shift in tone. The focus was on precise observation, translating the subtle interplay of light and shadow across the subject's features to convey depth and authenticity."
+        },
+        {
+          "phase": "The Culmination",
+          "title": "An Intimate Portrait",
+          "description": "The finished sketch stands as a powerful, intimate portrait, celebrating the quiet dignity and expressive richness of the human face. It is a testament to the enduring power of realistic art to evoke empathy and reflection."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [],
+        "dimensions_cm": {
+          "height": 30.0,
+          "width": 21.0
+        },
+        "weight_kg": 1.0,
+        "craft_type": "Realistic sketch"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0009-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "old-men-sketch-living-room-mockup",
+          "title": "Old Men: Realistic Sketch in a Modern Living Room",
+          "placement_context": "A sophisticated, minimalist living room with neutral tones. The sketch is framed in a simple black frame and hung above a sleek, dark wood console table. Natural light streams in from a nearby window, casting soft shadows.",
+          "prompt": "A realistic sketch of an old man's face, rendered with fine detail on textured paper, measuring approximately 30x21 cm, is displayed in a modern, elegantly styled living room. The artwork is framed in a slim black frame, hung centrally above a dark wood console table. The room features a neutral color palette with subtle textures, large windows allowing soft, natural daylight, and a minimalist aesthetic. Close-up shot, eye-level, shallow depth of field, peaceful and contemplative mood.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "old-men-sketch-study-corner-mockup",
+          "title": "Old Men: Realistic Sketch in a Cozy Study",
+          "placement_context": "A warm and inviting study or home office, featuring bookshelves filled with leather-bound books, a comfortable armchair, and a wooden desk. The sketch is placed on the desk, leaning against a stack of books, with a warm desk lamp illuminating it.",
+          "prompt": "A hyper-realistic sketch of an elderly man's face, showcasing intricate wrinkles and skin texture, framed in a simple, light wood frame, approximately 30x21 cm. The artwork is artfully placed on a vintage wooden desk in a cozy study. The background includes blurred bookshelves with classic books and a warm, focused light from a brass desk lamp. The mood is intimate and scholarly, with soft, warm lighting creating depth and highlighting the sketch's details. Medium shot, slightly angled view.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "old-men-sketch-texture-detail-story",
+          "title": "Close-up of Wrinkles and Skin Texture",
+          "placement_context": "A macro view focusing on the intricate details of the sketch, highlighting the fine lines and textures.",
+          "prompt": "Extreme close-up macro photograph of a realistic sketch on textured paper, focusing on the finely rendered wrinkles and skin texture of an old man's face. The graphite lines are sharp and precise, with subtle smudging to create depth. The paper has a visible tooth. Soft, directional studio lighting emphasizes the tactile quality of the drawing. The mood is one of deep observation and appreciation for detail. No people visible, abstract focus on the art medium.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "old-men-sketch-graphite-shavings-story",
+          "title": "Graphite Shavings and Sketching Tools",
+          "placement_context": "An overhead shot of a clean artist's workspace, showing stray graphite shavings and a few essential sketching tools.",
+          "prompt": "Overhead view of a clean, minimalist artist's workspace. Scattered, fine graphite shavings lie on a smooth, light-colored surface next to a high-quality sketching pencil and a soft blending stump. The focus is on the raw materials and tools used in creating a realistic sketch, hinting at the meticulous process. Natural, diffused light illuminates the scene, creating a serene and focused atmosphere. The mood is one of quiet dedication and craft.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ]
+    }
+  }
+]

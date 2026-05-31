@@ -1,0 +1,103 @@
+[
+  {
+    "product_id": "HK-AR-0003-01",
+    "artist_info": {
+      "name": "JANNU JOY CHARRAN",
+      "id": "HK-AR-0003"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "Lord Krishna",
+        "hook_subtitle": "A considered handmade piece in mixed media.",
+        "price_inr": 12999,
+        "availability_status": "Ready to Ship"
+      },
+      "main_content": {
+        "rich_description_html": "<p>Lord Krishna is a handmade mixed media shaped with attention, patience, and a close sensitivity to expression. The artist's note describes it as: The painting depicts Lord Krishna playing a flute, against a vibrant yellow background that suggests a divine aura or a halo. Krishna is shown with dark skin, adorned with jewelry, including necklaces and armlets. A crown with peacock feathers rests on his head, a common motif associated with Krishna. His eyes are closed, indicating a state of deep concentration or spiritual absorption while playing the flute. The overall impression is one of serenity, devotion, and divine music. (Include frame charge)</p><p>Created using Acrylic and Charcoal, the piece is presented for a space that values quiet detail, human touch, and the presence of original craft.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "1",
+          "title": "The Inspiration",
+          "description": "The work begins with a focused idea: to hold emotion, form, and atmosphere in a single handmade composition."
+        },
+        {
+          "phase": "2",
+          "title": "The Craft",
+          "description": "Layer by layer, the artist works through Acrylic and Charcoal, using the discipline of mixed media to build texture and depth."
+        },
+        {
+          "phase": "3",
+          "title": "The Culmination",
+          "description": "The final piece carries the visible patience of the hand, ready to bring warmth and character into a considered interior."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [
+          "Acrylic",
+          "Charcoal"
+        ],
+        "dimensions_cm": {
+          "height": 41.91,
+          "width": 30.48
+        },
+        "weight_kg": 500.0,
+        "craft_type": "Mixed media"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0003-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "lord-krishna-living-room-mockup",
+          "title": "Warm Living Room Mockup",
+          "placement_context": "living room",
+          "prompt": "Product mockup photograph of a Mixed media titled Lord Krishna, made with Acrylic, Charcoal, approximately 41.91 x 30.48 cm, displayed as the focal artwork in a calm modern Indian living room with natural wood, linen upholstery, soft daylight, breathable negative space, editorial ecommerce styling, no people, no logos, no text.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "lord-krishna-study-mockup",
+          "title": "Study Wall Mockup",
+          "placement_context": "home study or office",
+          "prompt": "Premium interior mockup showing Lord Krishna, a handmade Mixed media, placed on a refined study wall above a minimal desk, material character visible as Acrylic, Charcoal, warm directional light, quiet gallery composition, realistic shadows, no people, no brand marks, no text overlay.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "lord-krishna-material-story",
+          "title": "Material Detail Story",
+          "placement_context": "creation detail",
+          "prompt": "Close-up story image inspired by the making of Lord Krishna: Acrylic, Charcoal textures, careful handmade marks, art studio surface, premium macro product photography, soft side light, no hands, no people, no text, no watermark.",
+          "aspect_ratio": "1:1",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        },
+        {
+          "slug": "lord-krishna-final-polish-story",
+          "title": "Final Polish Story",
+          "placement_context": "finished artwork detail",
+          "prompt": "Elegant detail image suggesting the final polish of Lord Krishna, a Mixed media, with emphasis on handmade surface quality, subtle depth, quiet shadows, gallery-like restraint, no people, no logos, no text.",
+          "aspect_ratio": "1:1",
+          "filename": null,
+          "generation_status": "planned",
+          "error": null
+        }
+      ]
+    }
+  }
+]

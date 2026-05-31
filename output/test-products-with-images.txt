@@ -1,0 +1,100 @@
+[
+  {
+    "product_id": "HK-AR-0009-01",
+    "artist_info": {
+      "name": "Artist Leshant",
+      "id": "HK-AR-0009"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "A Study in Age: Realistic Sketch",
+        "hook_subtitle": "Capturing the profound narrative etched into a lifetime.",
+        "price_inr": 2500,
+        "availability_status": "Both"
+      },
+      "main_content": {
+        "rich_description_html": "<p>This realistic sketch offers a deeply evocative portrait, focusing on the expressive qualities of an elder's face. The artist has meticulously rendered the subtle nuances of skin texture and the intricate map of wrinkles, transforming each line into a testament to lived experience.</p><p>More than a mere likeness, this piece is an intimate exploration of character, inviting contemplation on the passage of time and the stories held within a single expression.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "1. The Inspiration",
+          "title": "A Moment of Reflection",
+          "description": "The artist was drawn to the compelling narrative held within the subject's face, seeking to capture the depth of emotion and the visual poetry of aging."
+        },
+        {
+          "phase": "2. The Craft",
+          "title": "Mastery of Line and Tone",
+          "description": "Through precise linework and sensitive tonal control, the artist meticulously recreated the intricate details of the subject's skin, emphasizing texture and the delicate rendering of wrinkles."
+        },
+        {
+          "phase": "3. The Culmination",
+          "title": "An Enduring Portrait",
+          "description": "The finished sketch stands as a powerful testament to the artist's skill, offering a profound and resonant portrayal that honors the subject's journey and the beauty of a life fully lived."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [],
+        "dimensions_cm": {
+          "height": 30.0,
+          "width": 21.0
+        },
+        "weight_kg": 1.0,
+        "craft_type": "Realistic sketch"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0009-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "old-men-hyper-realistic-sketch-living-room-mockup",
+          "title": "Old Men Hyper Realistic Sketch - Cozy Living Room",
+          "placement_context": "A realistic sketch of an old man's face, rendered in a hyper-realistic style, is displayed on a minimalist white wall in a cozy, well-lit living room. The artwork is framed in a simple black frame and is positioned above a plush, cream-colored sofa. Natural light streams in from a nearby window, casting a soft glow on the scene. The mood is contemplative and serene. Camera angle is eye-level, medium shot.",
+          "prompt": "A hyper-realistic sketch of an old man's face, 30x21 cm, framed in thin black wood, hung at eye level on a clean white wall in a Scandinavian-inspired living room. Below the artwork is a textured, neutral-toned sofa. Soft, natural afternoon light illuminates the space, creating a serene and inviting atmosphere. Medium shot, eye-level camera angle. Photorealistic rendering.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-image\\nPlease retry in 40.593368873s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+        },
+        {
+          "slug": "old-men-hyper-realistic-sketch-gallery-wall-mockup",
+          "title": "Old Men Hyper Realistic Sketch - Boutique Gallery Wall",
+          "placement_context": "The hyper-realistic sketch of an old man's face is incorporated into a curated gallery wall in a boutique interior. The artwork, 30x21 cm, is placed alongside other pieces of varying sizes and styles, creating an eclectic yet sophisticated display. The wall is a deep, muted teal. The surrounding decor includes a vintage armchair and a small side table with a ceramic vase. The lighting is warm and ambient, suggesting an evening setting. Close-up shot, focusing on the texture and detail of the sketch.",
+          "prompt": "A 30x21 cm hyper-realistic sketch of an old man's face, presented in a slim, dark frame, as part of a stylish gallery wall in a boutique setting. The wall is painted a deep, sophisticated teal. Other artworks and decorative elements create a curated feel. Warm, intimate gallery lighting. Close-up shot, highlighting the detailed linework and skin texture of the sketch. High detail, realistic.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\nPlease retry in 40.454406064s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "old-men-hyper-realistic-sketch-texture-detail-story",
+          "title": "Old Men Hyper Realistic Sketch - Skin Texture Detail",
+          "placement_context": "A close-up, macro shot focusing on the intricate details of the hyper-realistic sketch. The image emphasizes the fine lines, wrinkles, and subtle tonal variations that create the illusion of aged skin texture. The background is softly blurred, suggesting the artist's workspace with hints of drawing tools and paper. The lighting is focused and dramatic, highlighting the texture. Mood is intimate and focused on the craft.",
+          "prompt": "Extreme close-up, macro photograph of a hyper-realistic sketch depicting aged skin texture and wrinkles. Focus on the delicate linework and subtle shading that creates depth and realism. Softly blurred background suggesting an art studio environment with hints of graphite pencils and textured paper. Dramatic, focused lighting to emphasize detail. Shallow depth of field. Photorealistic.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\nPlease retry in 40.076045891s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-image', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}"
+        },
+        {
+          "slug": "old-men-hyper-realistic-sketch-line-work-story",
+          "title": "Old Men Hyper Realistic Sketch - Mastery of Line",
+          "placement_context": "A detail shot showcasing the artist's precise linework in the hyper-realistic sketch. The focus is on the controlled, varied strokes used to build form and expression. Hints of graphite dust or smudging on a textured drawing surface are visible. The lighting is crisp and clear, emphasizing the quality of the lines. The mood is one of concentration and skilled execution.",
+          "prompt": "A high-resolution, detailed photograph focusing on the precise graphite linework of a hyper-realistic sketch of a face. Show the variation in line weight and shading techniques used to create form. Subtle hints of graphite dust on a textured artist's paper. Clean, bright lighting to accentuate the sharpness of the lines. Close-up perspective, emphasizing the artist's skill and control. Realistic photography.",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-image\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-image\\nPlease retry in 39.922931761s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.1-flash-image'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}"
+        }
+      ]
+    }
+  }
+]

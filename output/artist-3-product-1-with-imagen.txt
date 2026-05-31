@@ -1,0 +1,103 @@
+[
+  {
+    "product_id": "HK-AR-0003-01",
+    "artist_info": {
+      "name": "JANNU JOY CHARRAN",
+      "id": "HK-AR-0003"
+    },
+    "ui_mapping": {
+      "sticky_sidebar": {
+        "title": "Lord Krishna: A Melodious Aura",
+        "hook_subtitle": "Experience the divine resonance of music, captured in a vibrant symphony of mixed media.",
+        "price_inr": 12999,
+        "availability_status": "Ready to Ship"
+      },
+      "main_content": {
+        "rich_description_html": "<p>This exquisite mixed media piece, rendered in acrylic and charcoal, offers a serene portrayal of Lord Krishna in a moment of profound musical communion. The artist masterfully employs a rich, vibrant yellow background to evoke a divine aura, a luminous halo surrounding the central figure.</p><p>Krishna, depicted with deep, resonant skin tones, is adorned with intricate jewelry, each detail carefully rendered. The iconic crown, crowned with delicate peacock feathers, signifies his divine presence. His closed eyes suggest a deep spiritual absorption, a state of transcendental bliss as the melody flows from his flute.</p><p>The interplay of acrylic and charcoal lends a unique textural depth, balancing vibrant color with the subtle, grounding tones of charcoal. This artwork is more than a depiction; it is an invitation to feel the serenity, devotion, and the universal language of divine music.</p>"
+      },
+      "timeline_story": [
+        {
+          "phase": "The Inspiration",
+          "title": "Echoes of Divine Melody",
+          "description": "The artist was moved by the timeless imagery of Lord Krishna, envisioning the spiritual power and serene beauty inherent in his divine music. This piece seeks to capture the transcendent moment when melody and divinity converge, creating an atmosphere of profound peace and devotion."
+        },
+        {
+          "phase": "The Craft",
+          "title": "A Symphony of Mediums",
+          "description": "Employing a thoughtful combination of acrylic and charcoal, the artist meticulously built layers of color and texture. The vibrant yellow, a symbol of divine light, forms the backdrop, while charcoal defines the form and adds a grounding presence, highlighting the intricate details of Krishna's adornments and the graceful posture."
+        },
+        {
+          "phase": "The Culmination",
+          "title": "Resonance and Serenity",
+          "description": "The final piece resonates with a quiet, powerful energy. The serene expression, the gentle posture, and the enveloping aura converge to create an artwork that radiates devotion and the ethereal beauty of divine music, offering a tranquil focal point for any space."
+        }
+      ],
+      "specifications_accordion": {
+        "materials": [
+          "Acrylic",
+          "Charcoal"
+        ],
+        "dimensions_cm": {
+          "height": 41.91,
+          "width": 30.48
+        },
+        "weight_kg": 0.5,
+        "craft_type": "Mixed Media"
+      }
+    },
+    "local_media": {
+      "directory_path": "/assets/products/HK-AR-0003-01/",
+      "saved_filenames": [
+        "source_1.jpg"
+      ],
+      "generated_mockup_filenames": [],
+      "generated_story_filenames": []
+    },
+    "generated_media": {
+      "mockup_shots": [
+        {
+          "slug": "lord-krishna-mixed-media-mockup-living-room",
+          "title": "Lord Krishna Mixed Media Painting in a Modern Living Room",
+          "placement_context": "A 41.91cm x 30.48cm mixed media painting of Lord Krishna playing the flute, rendered in acrylic and charcoal on a vibrant yellow background, is displayed above a minimalist console table in a chic, contemporary living room. Natural light streams in from a nearby window, casting a soft glow on the artwork. The interior features neutral tones, a plush sofa, and subtle greenery, highlighting the painting as a serene focal point. Shot with a medium telephoto lens, f/2.8, to create a shallow depth of field, emphasizing the artwork.",
+          "prompt": "A 41.91cm x 30.48cm framed mixed media painting of Lord Krishna playing the flute, acrylic and charcoal on a vibrant yellow background, is hung above a dark wood console table in a modern, minimalist living room. Soft, natural light from a large window illuminates the scene. The room has a neutral color palette with a grey sofa and a potted plant. The camera is at eye level, focused on the painting, with a shallow depth of field. Mood: Serene, elegant, sophisticated. --ar 16:9",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Imagen 3 is only available on paid plans. Please upgrade your account at https://ai.dev/projects.', 'status': 'INVALID_ARGUMENT'}}"
+        },
+        {
+          "slug": "lord-krishna-mixed-media-mockup-reading-nook",
+          "title": "Lord Krishna Mixed Media Art in a Cozy Reading Nook",
+          "placement_context": "The 41.91cm x 30.48cm mixed media artwork of Lord Krishna, with its striking yellow background, is placed on a small, elegantly carved wooden easel on a side table next to a comfortable armchair in a cozy reading nook. A stack of books and a steaming mug of tea sit nearby. The lighting is warm and inviting, suggesting lamplight, creating an intimate atmosphere. The camera is positioned slightly below the artwork, looking up, with a soft focus on the background elements. Shot with a 50mm lens, f/1.8.",
+          "prompt": "A framed 41.91cm x 30.48cm mixed media painting of Lord Krishna playing the flute, acrylic and charcoal on a vibrant yellow background, is displayed on a wooden easel on a side table in a cozy reading nook. The scene includes a plush armchair, a stack of books, and a warm table lamp casting a gentle glow. The background is softly blurred, focusing attention on the artwork. Mood: Peaceful, devotional, intimate. --ar 3:4",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Imagen 3 is only available on paid plans. Please upgrade your account at https://ai.dev/projects.', 'status': 'INVALID_ARGUMENT'}}"
+        }
+      ],
+      "story_images": [
+        {
+          "slug": "lord-krishna-mixed-media-craft-detail",
+          "title": "Close-up of Acrylic and Charcoal Textures",
+          "placement_context": "A macro photograph capturing the intricate texture of acrylic paint and charcoal lines on a canvas, hinting at the creation of the Lord Krishna artwork. The vibrant yellow acrylic forms a luminous base, while dark charcoal strokes define form and depth. The lighting is dramatic, with a single spotlight emphasizing the tactile qualities of the materials. Shot with a macro lens, f/2.8, focusing on the interplay of mediums.",
+          "prompt": "Extreme close-up, macro photograph showcasing the textural interplay of thick, vibrant yellow acrylic paint and bold charcoal lines on a canvas. The lighting is dramatic, highlighting the raised texture of the paint and the granular quality of the charcoal. Focus is razor-sharp on the material details, with a shallow depth of field blurring the immediate surroundings. Mood: Artistic, textural, raw. --ar 1:1",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Imagen 3 is only available on paid plans. Please upgrade your account at https://ai.dev/projects.', 'status': 'INVALID_ARGUMENT'}}"
+        },
+        {
+          "slug": "lord-krishna-mixed-media-inspiration-aura",
+          "title": "Abstract Yellow Aura and Peacock Feather Detail",
+          "placement_context": "An abstract, atmospheric image suggesting the inspiration behind the artwork. A radiant, glowing yellow aura fills the frame, with subtle hints of charcoal smudges and the delicate texture of peacock feather filaments appearing softly in the foreground. The lighting is ethereal and diffused, creating a sense of divine presence and inspiration. Shot with a wide-angle lens, f/4, to capture the expansive feel.",
+          "prompt": "An abstract, atmospheric visual representing divine inspiration. A luminous, soft-focus yellow glow dominates the scene, evoking a spiritual aura. Subtle, blurred charcoal dust particles drift in the foreground, and the ethereal, soft texture of peacock feather barbs is barely visible, hinting at the artwork's motifs. The lighting is diffused and dreamlike. Mood: Ethereal, spiritual, inspired. --ar 16:9",
+          "aspect_ratio": "4:3",
+          "filename": null,
+          "generation_status": "failed",
+          "error": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Imagen 3 is only available on paid plans. Please upgrade your account at https://ai.dev/projects.', 'status': 'INVALID_ARGUMENT'}}"
+        }
+      ]
+    }
+  }
+]
