@@ -95,3 +95,94 @@ python -m hastakala_pipeline.cli --input submissions.csv --output output/product
 ```
 
 The output file is a JSON array saved as `.txt`, with one object per CSV row.
+
+## Docker
+
+Build the image:
+
+```powershell
+docker build -t hastakala-ai-pipeline:local .
+```
+
+Run with the sample CSV mounted by Docker Compose:
+
+```powershell
+docker compose run --rm pipeline
+```
+
+Run a custom CSV:
+
+```powershell
+docker run --rm --env-file .env `
+  -v "${PWD}\assets:/app/assets" `
+  -v "${PWD}\output:/app/output" `
+  -v "${PWD}\submissions.csv:/app/submissions.csv:ro" `
+  hastakala-ai-pipeline:local `
+  --input /app/submissions.csv `
+  --output /app/output/products.txt `
+  --assets-root /app/assets/products
+```
+
+## DigitalOcean Deployment
+
+This is a batch pipeline, not a long-running web server. You only need a Droplet
+if you want a machine that runs the container on a schedule or on demand. For
+CI/CD, this repo builds the Docker image and pushes it to DigitalOcean Container
+Registry via `.github/workflows/ci-cd.yml`.
+
+The DigitalOcean Container Registry for this project is:
+
+```text
+registry.digitalocean.com/hastakala-ai-pipeline
+```
+
+Add these GitHub Actions secrets:
+
+- `DIGITALOCEAN_ACCESS_TOKEN`: a DigitalOcean API token with registry access.
+- `DROPLET_HOST`: optional, only needed for Droplet deploys.
+- `DROPLET_USER`: optional, usually `root` or a deploy user.
+- `DROPLET_SSH_PRIVATE_KEY`: optional, the private key GitHub Actions uses to
+  SSH into the Droplet.
+
+Set this GitHub Actions variable only when you want the workflow to run the
+pipeline on a Droplet after publishing the image:
+
+- `DEPLOY_TO_DROPLET=true`
+
+After a push to `main` or `master`, GitHub Actions publishes:
+
+```text
+registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest
+registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:<git-sha>
+```
+
+To run it on a Droplet:
+
+```bash
+echo "$DIGITALOCEAN_ACCESS_TOKEN" | docker login registry.digitalocean.com -u "$DIGITALOCEAN_ACCESS_TOKEN" --password-stdin
+docker pull registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest
+docker run --rm --env-file .env \
+  -v "$PWD/assets:/app/assets" \
+  -v "$PWD/output:/app/output" \
+  -v "$PWD/submissions.csv:/app/submissions.csv:ro" \
+  registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest \
+  --input /app/submissions.csv \
+  --output /app/output/products.txt \
+  --assets-root /app/assets/products
+```
+
+To create a fresh Ubuntu Droplet for this job, use the included cloud-init file
+after confirming you want a paid Droplet:
+
+```powershell
+doctl compute droplet create hastakala-ai-pipeline `
+  --region blr1 `
+  --image ubuntu-24-04-x64 `
+  --size s-1vcpu-1gb `
+  --ssh-keys <ssh-key-id> `
+  --user-data-file deploy/droplet-cloud-init.yaml `
+  --wait
+```
+
+Then upload `/opt/hastakala-ai-pipeline/.env`, `submissions.csv`, and assets to
+the Droplet before enabling `DEPLOY_TO_DROPLET=true` in GitHub Actions.

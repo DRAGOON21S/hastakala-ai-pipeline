@@ -1,0 +1,17 @@
+services:
+  pipeline:
+    build: .
+    image: hastakala-ai-pipeline:local
+    env_file:
+      - .env
+    volumes:
+      - ./assets:/app/assets
+      - ./output:/app/output
+      - ./Artists Products Details (Responses) - Form responses 1.csv:/app/submissions.csv:ro
+    command:
+      - --input
+      - /app/submissions.csv
+      - --output
+      - /app/output/products.txt
+      - --assets-root
+      - /app/assets/products
