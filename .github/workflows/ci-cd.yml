@@ -61,27 +61,40 @@ jobs:
     if: vars.DEPLOY_TO_DROPLET == 'true'
     env:
       IMAGE: registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest
+      DROPLET_HOST: ${{ vars.DROPLET_HOST }}
+      DROPLET_USER: ${{ vars.DROPLET_USER }}
     steps:
-      - name: Ensure deploy secret exists
+      - name: Validate deploy configuration
         run: |
           if [ -z "${{ secrets.DROPLET_SSH_PRIVATE_KEY }}" ]; then
-            echo "Missing DROPLET_SSH_PRIVATE_KEY secret." >&2
+            echo "Missing repository secret: DROPLET_SSH_PRIVATE_KEY" >&2
+            exit 1
+          fi
+          if [ -z "${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}" ]; then
+            echo "Missing repository secret: DIGITALOCEAN_ACCESS_TOKEN" >&2
+            exit 1
+          fi
+          if [ -z "$DROPLET_HOST" ]; then
+            echo "Missing repository variable: DROPLET_HOST" >&2
+            exit 1
+          fi
+          if [ -z "$DROPLET_USER" ]; then
+            echo "Missing repository variable: DROPLET_USER" >&2
+            exit 1
+          fi
+          if [ -z "$IMAGE" ]; then
+            echo "Missing deployment image." >&2
             exit 1
           fi
 
       - name: Start SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
+        uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.DROPLET_SSH_PRIVATE_KEY }}
 
       - name: Run pipeline on Droplet
         run: |
-          if [ -z "${{ secrets.DROPLET_HOST }}" ] || [ -z "${{ secrets.DROPLET_USER }}" ] || [ -z "${{ env.IMAGE }}" ]; then
-            echo "Set DROPLET_HOST, DROPLET_USER, and image defaults before enabling deployment." >&2
-            exit 1
-          fi
-
-          ssh -o StrictHostKeyChecking=no ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} <<'EOF'
+          ssh -o StrictHostKeyChecking=accept-new "$DROPLET_USER@$DROPLET_HOST" <<'EOF'
             set -euo pipefail
             IMAGE="registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest"
             DO_TOKEN='${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}'

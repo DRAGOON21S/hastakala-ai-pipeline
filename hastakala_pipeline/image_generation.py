@@ -9,6 +9,12 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from .config import (
+    configure_google_credentials,
+    use_vertex_ai,
+    vertex_location,
+    vertex_project,
+)
 from .schemas import GeneratedVisual, VisualPrompt
 
 
@@ -18,15 +24,24 @@ ALLOWED_ASPECT_RATIOS = {"1:1", "3:4", "4:3", "9:16", "16:9"}
 class ImagenGenerator:
     def __init__(self, model: str | None = None) -> None:
         load_dotenv()
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise RuntimeError(
-                "GEMINI_API_KEY is missing. Add it to your environment or .env file."
-            )
+        configure_google_credentials()
 
         from google import genai
 
-        self.client = genai.Client(api_key=api_key)
+        if use_vertex_ai():
+            self.client = genai.Client(
+                vertexai=True,
+                project=vertex_project(),
+                location=vertex_location(),
+            )
+        else:
+            api_key = os.getenv("GEMINI_API_KEY")
+            if not api_key:
+                raise RuntimeError(
+                    "GEMINI_API_KEY is missing. Add it to your environment or .env file."
+                )
+            self.client = genai.Client(api_key=api_key)
+
         self.provider = os.getenv("IMAGE_PROVIDER", "gemini").strip().lower()
         if self.provider not in {"gemini", "imagen"}:
             raise ValueError("IMAGE_PROVIDER must be either 'gemini' or 'imagen'.")
@@ -35,7 +50,7 @@ class ImagenGenerator:
         else:
             self.model = model or os.getenv(
                 "GEMINI_IMAGE_MODEL",
-                "gemini-3.1-flash-image-preview",
+                "gemini-3-pro-image",
             )
 
     def generate_visual(

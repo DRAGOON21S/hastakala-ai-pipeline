@@ -8,6 +8,12 @@ from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+from .config import (
+    configure_google_credentials,
+    use_vertex_ai,
+    vertex_location,
+    vertex_project,
+)
 from .prompts import (
     STORYTELLER_SYSTEM_PROMPT,
     STRUCTURING_SYSTEM_PROMPT,
@@ -28,13 +34,40 @@ class GeminiContentClient:
         temperature: float = 0.65,
     ) -> None:
         load_dotenv()
+        configure_google_credentials()
+        self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.1-pro-preview")
+
+        if use_vertex_ai():
+            from langchain_google_vertexai import ChatVertexAI
+
+            project = vertex_project()
+            location = vertex_location()
+            self.story_llm = ChatVertexAI(
+                model=self.model,
+                project=project,
+                location=location,
+                temperature=temperature,
+            ).with_structured_output(StorytellingOutput)
+            self.specs_llm = ChatVertexAI(
+                model=self.model,
+                project=project,
+                location=location,
+                temperature=0.2,
+            ).with_structured_output(SpecsFormattingOutput)
+            self.visual_llm = ChatVertexAI(
+                model=self.model,
+                project=project,
+                location=location,
+                temperature=0.7,
+            ).with_structured_output(VisualPlanningOutput)
+            return
+
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise RuntimeError(
                 "GEMINI_API_KEY is missing. Add it to your environment or .env file."
             )
 
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
         self.story_llm = ChatGoogleGenerativeAI(
             model=self.model,
             google_api_key=api_key,

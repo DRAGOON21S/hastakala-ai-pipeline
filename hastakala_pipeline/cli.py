@@ -29,12 +29,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--model",
         default=None,
-        help="Optional Gemini model override. Defaults to GEMINI_MODEL or gemini-2.0-flash.",
+        help="Optional Gemini model override. Defaults to GEMINI_MODEL or gemini-3.1-pro-preview.",
     )
     parser.add_argument(
         "--image-model",
         default=None,
-        help="Optional Imagen model override. Defaults to IMAGEN_MODEL or imagen-4.0-generate-001.",
+        help="Optional image model override. Defaults to GEMINI_IMAGE_MODEL or gemini-3-pro-image.",
     )
     parser.add_argument(
         "--skip-image-generation",

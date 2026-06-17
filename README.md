@@ -2,8 +2,8 @@
 
 This Python pipeline reads messy artist-submission CSV data, finds already-local
 product images, calls Gemini through LangChain for content and visual planning,
-optionally calls Imagen for generated mockup/story images, and writes strict JSON
-to a `.txt` file for the Shopify OS 2.0 frontend.
+optionally calls Gemini or Imagen for generated mockup/story images, and writes
+strict JSON to a `.txt` file for the Shopify OS 2.0 frontend.
 
 ## Setup
 
@@ -17,11 +17,60 @@ Copy-Item .env.example .env
 Edit `.env`:
 
 ```env
-GEMINI_API_KEY=your_google_ai_studio_api_key_here
-GEMINI_MODEL=gemini-2.5-flash-lite
+GOOGLE_GENAI_USE_VERTEXAI=true
+GOOGLE_CLOUD_PROJECT=your-google-cloud-project-id
+GOOGLE_CLOUD_LOCATION=global
+GOOGLE_APPLICATION_CREDENTIALS=
+GOOGLE_APPLICATION_CREDENTIALS_JSON_BASE64=base64_encoded_service_account_json
+GEMINI_MODEL=gemini-3.1-pro-preview
 IMAGE_PROVIDER=gemini
-GEMINI_IMAGE_MODEL=gemini-2.5-flash-image
+GEMINI_IMAGE_MODEL=gemini-3-pro-image
 IMAGEN_MODEL=imagen-4.0-generate-001
+```
+
+This uses Vertex AI / Gemini Enterprise Agent Platform instead of the Google AI
+Studio API key path. The current high-quality defaults are:
+
+- `GEMINI_MODEL=gemini-3.1-pro-preview` for text and structured JSON.
+- `GEMINI_IMAGE_MODEL=gemini-3-pro-image` for highest-quality Gemini image
+  generation.
+
+For a cheaper/faster text model, use `gemini-3.5-flash`. For a cheaper/faster
+image model, use `gemini-3.1-flash-image`.
+
+## Vertex AI Credentials
+
+In Google Cloud:
+
+1. Select the project that has your credits.
+2. Enable billing and the Vertex AI / Gemini Enterprise Agent Platform API.
+3. Create a service account.
+4. Grant it `Vertex AI User`.
+5. Create and download a JSON key.
+
+For Docker and Droplet usage, encode the JSON key as one line:
+
+```powershell
+[Convert]::ToBase64String([IO.File]::ReadAllBytes(".\google-credentials.json"))
+```
+
+Paste that value into:
+
+```env
+GOOGLE_APPLICATION_CREDENTIALS_JSON_BASE64=...
+```
+
+Do not commit the JSON key or `.env`. Both are ignored by git.
+
+If you want local Python to use your `gcloud auth application-default login`
+credentials instead, leave both `GOOGLE_APPLICATION_CREDENTIALS` and
+`GOOGLE_APPLICATION_CREDENTIALS_JSON_BASE64` empty.
+
+To use the older Google AI Studio key path instead, set:
+
+```env
+GOOGLE_GENAI_USE_VERTEXAI=false
+GEMINI_API_KEY=your_google_ai_studio_api_key_here
 ```
 
 ## Expected CSV Headers
@@ -79,7 +128,7 @@ python -m hastakala_pipeline.cli --input submissions.csv --output output/product
 Optional:
 
 ```powershell
-python -m hastakala_pipeline.cli --input submissions.csv --output output/products.txt --assets-root assets/products --model gemini-2.5-flash-lite --image-model gemini-2.5-flash-image
+python -m hastakala_pipeline.cli --input submissions.csv --output output/products.txt --assets-root assets/products --model gemini-3.1-pro-preview --image-model gemini-3-pro-image
 ```
 
 Test only the first parsed product and import loose root images:
