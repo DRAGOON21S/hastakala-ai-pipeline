@@ -101,7 +101,7 @@ The output file is a JSON array saved as `.txt`, with one object per CSV row.
 Build the image:
 
 ```powershell
-docker build -t hastakala-ai-pipeline:local .
+docker build --provenance=false -t hastakala-ai-pipeline:local .
 ```
 
 Run with the sample CSV mounted by Docker Compose:
