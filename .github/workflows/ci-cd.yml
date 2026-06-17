@@ -70,10 +70,24 @@ jobs:
           fi
 
       - name: Prepare SSH key
+        env:
+          DROPLET_SSH_PRIVATE_KEY: ${{ secrets.DROPLET_SSH_PRIVATE_KEY }}
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "${{ secrets.DROPLET_SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          key = os.environ["DROPLET_SSH_PRIVATE_KEY"]
+          if "\\n" in key:
+              key = key.replace("\\n", "\n")
+          if not key.endswith("\n"):
+              key += "\n"
+          key_path = Path.home().joinpath(".ssh", "deploy_key")
+          fd = os.open(str(key_path), os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+          with os.fdopen(fd, "w") as f:
+              f.write(key)
+          PY
 
       - name: Run pipeline on Droplet
         run: |
@@ -105,3 +119,12 @@ jobs:
               --output /app/output/products.txt \
               --assets-root /app/assets/products
           EOF
+
+      - name: Remove SSH key
+        if: always()
+        run: |
+          if command -v shred >/dev/null 2>&1; then
+            shred -u ~/.ssh/deploy_key
+          else
+            rm -f ~/.ssh/deploy_key
+          fi
