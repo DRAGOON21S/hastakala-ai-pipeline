@@ -145,6 +145,47 @@ python -m hastakala_pipeline.cli --input submissions.csv --output output/product
 
 The output file is a JSON array saved as `.txt`, with one object per CSV row.
 
+## API Server
+
+The API wraps the same pipeline so an onboarding frontend can call it directly.
+Set these optional API-only environment variables in `.env`:
+
+```env
+HASTAKALA_API_KEY=change-me
+HASTAKALA_CORS_ORIGINS=http://localhost:3000,https://your-onboarding-domain.com
+```
+
+Run locally:
+
+```powershell
+uvicorn hastakala_pipeline.api:app --host 0.0.0.0 --port 8000
+```
+
+Health check:
+
+```bash
+curl http://localhost:8000/health
+```
+
+Upload a CSV and get frontend-ready JSON:
+
+```bash
+curl -X POST http://localhost:8000/v1/pipeline/run \
+  -H "X-API-Key: change-me" \
+  -F "csv_file=@submissions.csv" \
+  -F "generate_images=false" \
+  -F "limit=1"
+```
+
+Run a CSV already present on the server:
+
+```bash
+curl -X POST http://localhost:8000/v1/pipeline/run-local \
+  -H "X-API-Key: change-me" \
+  -H "Content-Type: application/json" \
+  -d '{"input_path":"/opt/hastakala-ai-pipeline/submissions.csv","output_path":"/opt/hastakala-ai-pipeline/output/products.txt","assets_root":"/opt/hastakala-ai-pipeline/assets/products","generate_images":false,"limit":1}'
+```
+
 ## Docker
 
 Build the image:
@@ -218,6 +259,20 @@ docker run --rm --env-file .env \
   --input /app/submissions.csv \
   --output /app/output/products.txt \
   --assets-root /app/assets/products
+```
+
+To run the API on the Droplet manually using the same image:
+
+```bash
+docker run -d --name hastakala-ai-api --restart unless-stopped \
+  --env-file /opt/hastakala-ai-pipeline/.env \
+  -p 8000:8000 \
+  -v /opt/hastakala-ai-pipeline/assets:/app/assets \
+  -v /opt/hastakala-ai-pipeline/output:/app/output \
+  -v /opt/hastakala-ai-pipeline/submissions.csv:/app/submissions.csv:ro \
+  --entrypoint uvicorn \
+  registry.digitalocean.com/hastakala-ai-pipeline/hastakala-ai-pipeline:latest \
+  hastakala_pipeline.api:app --host 0.0.0.0 --port 8000
 ```
 
 To create a fresh Ubuntu Droplet for this job, use the included cloud-init file
